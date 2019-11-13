@@ -1,0 +1,21 @@
+img.back {
+  display: block;
+  margin-left: 2%;
+  margin-top: 2%;
+  height: auto;
+  width: 70px;
+}
+
+img.back:hover {
+  cursor: pointer
+}
+
+hr.gradient {
+  margin-top: 8px;
+  margin-left: 0px;
+  width: 360px;
+  border-radius: 15px;
+  height: 5px;
+  border: 0;
+  background-image: linear-gradient(90deg, #F4B447, #EE4C7A, #00B199, #8CC66A);
+}

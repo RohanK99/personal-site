@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+@font-face {
+  font-family: "stratum";
+  src: url('../fonts/stratum.ttf');
+}
+
+h1 {
+  font-family:  "stratum","Arial Narrow","Trebuchet MS",sans-serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "stratum","Arial Narrow","Trebuchet MS",sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Nunito Sans", serif;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+}
+
+.text-group {
+  display: inline-block;
+  text-align: left;
+  padding: 60 0 150 0;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  width: 5px;
+  height: auto;
+  display: inline-block;
+}
+
+hr.hr-gradient {
+  margin-top: 8px;
+  margin-left: 0px;
+  width: 69%;
+  border-radius: 15px;
+  height: 5px;
+  border: 0;
+  background-image: linear-gradient(90deg, #F4B447, #EE4C7A, #00B199, #8CC66A);
+}
+
+#github {
+  background: linear-gradient(to right, #A166AB 0%, #4E71B7 40%, #0B97AC 60%, #00B199 100%);
+}
+
+#blog {
+  background: linear-gradient(to right, #E67207 0%, #EF4E7B 50%, #A166AB 100%);
+}
+
+#email {
+  background: linear-gradient(to right, #00B199 0%, #6CB980 50%, #8CC66A 85%)
+}
+
+img.hoverUp:hover {
+  cursor: pointer;
+  transform: translate3d(0, -3px, 0);
+}
+
+button {
+  border: 0;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 48px;
+  min-width: 160px;
+  z-index: 1;
+  padding: 9px 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: all .4s ease-out;
+}
+
+button:before {
+  content: "";
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #22292C;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+button:hover:before {
+  transition: all .4s ease-out;
+  opacity: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline:0;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows:hover {
+  cursor: pointer;
+}
+
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.star {
+  display:block;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#FFF;
+  position:relative;
+  transform-origin:100% 0;
+  animation:star-ani 9s infinite ease-out;
+  animation-direction: normal;
+  opacity:0;
+}
+
+.star:after {
+  content:'';
+  position:absolute;
+  top:0px;
+  left:4px;
+  border:2px solid #F00;
+  border-width:2px 150px 2px 150px;
+  border-color:transparent transparent transparent #FFF;
+  transform:rotate(-45deg) translate3d(1px, -1px, 0);
+  transform-origin:0% 100%;
+  animation:shooting-ani 9s infinite ease-out;
+  animation-direction: normal;
+}
+
+.pink {
+  background:#EE4C7A;
+  animation-delay:0s;
+}
+
+.pink:after {
+  border-color:transparent transparent transparent #EE4C7A ;
+  animation-delay:0s;
+}
+
+.blue {
+  background:#0B97AC ;
+  animation-delay:3s;
+}
+
+.blue:after {
+  border-color:transparent transparent transparent #0B97AC;
+  animation-delay:3s;
+}
+
+.yellow {
+  background:#F69233;
+  animation-delay:6s;
+}
+
+.yellow:after {
+  border-color:transparent transparent transparent #F69233;
+  animation-delay:6s;
+}
+
+.green {
+  background: #6CB980;
+  animation-delay: 8s;
+}
+
+.green:after {
+  border-color:transparent transparent transparent #6CB980;
+  animation-delay: 8s;
+}
+
+@keyframes arrow {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+@-webkit-keyframes arrow {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+
+@-webkit-keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shooting-ani {
+  0% {
+
+  }
+  5% {
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  10% {
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+  100% {
+
+  }
+}
+
+@keyframes star-ani {
+  0%  {
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  5% {
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  10% {
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+  100% {
+
+  }
+}
+
+@-webkit-keyframes shooting-ani {
+  0% {
+
+  }
+  5% {
+    transform:scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  10% {
+    transform:scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+  100% {
+
+  }
+}
+
+@-webkit-keyframes star-ani {
+  0%  {
+    opacity:0;
+    transform:scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  5% {
+    opacity:1;
+    transform:scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  10% {
+    opacity:0;
+    transform:scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+  100% {
+
+  }
+}
